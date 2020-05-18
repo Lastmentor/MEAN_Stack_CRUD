@@ -1,0 +1,21 @@
+<table class="table table-hover table-borderless">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>  
+            <th></th>                     
+        </tr>
+    </thead>   
+    <tbody>
+        <tr *ngFor="let item of employeeService.employees">
+            <td>{{item.name}}</td>
+            <td>{{item.position}}</td>
+            <td>{{item.office}}</td>  
+            <td>
+                <i class="material-icons text-success" (click)="onEdit(item)">edit</i>&nbsp;                                                                        
+                <i class="material-icons text-danger" (click)="onDelete(item._id, employeeForm)">delete</i>                                                                           
+            </td>                     
+        </tr>
+    </tbody>             
+</table>  
